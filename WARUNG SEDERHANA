@@ -1,0 +1,86 @@
+#include <iostream>
+using namespace std;
+
+int Hargatotal(int jumlah, int harga){
+            harga *= jumlah;
+            return harga;
+    
+}
+
+void memilihMenu(int pesanan){
+    char ulang;
+    string pilihan;
+    int harga, jumlah;
+    
+    switch(pesanan){
+        case 1:
+            pilihan = "Indomie";
+            harga = 3000;
+            break;
+        case 2:
+            pilihan = "Roti Keju";
+            harga = 5000;
+            break;
+        case 3:
+            pilihan = "Susu";
+            harga = 6000;
+            break;
+        case 4:
+            pilihan = "Kopi";
+            harga = 4000;
+            break;
+        case 5:
+            pilihan = "Chitato Besar";
+            harga = 7000;
+            break;
+    }
+     cout<< endl << "Kamu memilih " << pilihan << " dengan harga Rp." << harga << "/pcs" << endl ; 
+     cout << "Ingin Berapa = ";
+     cin >> jumlah;
+     cout<< endl <<"ingin mengubah pesanan y/t)? = ";
+     cin >> ulang;
+    
+        while(ulang == 'y'  || ulang == 'Y'){
+           
+           int pilihan2;
+            
+            cout << endl << "Menu Galeri" << endl;
+            cout << "1. Indomie" << endl;
+            cout << "2. Roti Keju" << endl;
+            cout << "3. Susu" << endl;
+            cout << "4. Kopi" << endl;
+            cout << "5. Chitato Besar" << endl;
+            cout << "Tentukan Pilihan Anda = ";
+            cin >> pilihan2;
+            memilihMenu(pilihan2);
+            
+           return;
+        }
+    cout << endl << "Baik, pesanan " << pilihan << " sebanyak " << jumlah << " pcs dengan total harga Rp" << Hargatotal(jumlah, harga) << " akan dibuat.";
+   
+   
+}
+
+int main()
+{
+    
+    int pilihan;
+
+    cout << "\t\t------------------------------------" << endl;
+    cout << "\t\t            GALERI ITERA            " << endl;
+    cout << "\t\t------------------------------------" << endl;
+    cout << "Menu Galeri" << endl;
+    cout << "1. Indomie" << endl;
+    cout << "2. Roti Keju" << endl;
+    cout << "3. Susu" << endl;
+    cout << "4. Kopi" << endl;
+    cout << "5. Chitato Besar" << endl << endl;
+
+    cout << "Tentukan Pilihan Anda = ";
+    cin>>pilihan;
+    memilihMenu(pilihan);
+    return 0;
+}               
+
+
+
