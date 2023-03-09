@@ -1,2 +1,2 @@
 # PROJEK
-#### Program Sederhana Manager
+#### Program Manager Sederhana
