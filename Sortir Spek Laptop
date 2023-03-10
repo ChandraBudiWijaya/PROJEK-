@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+struct laptop{
+    float uLayar;
+    string merk;
+    int ram, storage, tahun;
+};
+
+int main(){
+   int a; 
+   cout << "Masukkan Banyak Laptop yang akan di input : ";
+   cin>>a;
+   
+   laptop spek[a];
+   int nomor[a];
+   
+   for(int i = 0; i < a; i++){
+       cout << "Laptop ke-" << i+1 << endl;
+       nomor[i] = i+1;
+       cout << "Merk             : ";cin >> spek[i].merk;
+       cout << "Ukuran layar     : ";cin >> spek[i].uLayar;
+       cout << "Kapasitas RAM    : ";cin >> spek[i].ram;
+       cout << "Kapasitas Memori : ";cin >> spek[i].storage;
+       cout << "Tahun beli       : ";cin >> spek[i].tahun;
+       cout << endl;
+   }
+   
+   cout << "Daftar Laptop yang lolos syarat \n\n";
+   
+   for(int i = 0; i < a; i++){
+       if(spek[i].tahun > 2020 && spek[i].merk == "LENOVO"){
+       cout << "Laptop ke-" << nomor[i] << endl;
+       cout << "Merk             : " << spek[i].merk << endl;
+       cout << "Ukuran layar     : " << spek[i].uLayar << endl;
+       cout << "Kapasitas RAM    : " << spek[i].ram << endl;
+       cout << "Kapasitas Memori : " << spek[i].storage << endl;
+       cout << "Tahun beli       : " << spek[i].tahun << endl;
+   }else{}
+   }
+  
+  return 0;
+}
